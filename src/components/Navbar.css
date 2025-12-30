@@ -1,0 +1,78 @@
+.navbar {
+  height: 64px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+}
+
+.nav-left {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 36px;
+}
+
+.streak {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 36px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.fire {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  line-height: 20px;
+}
+
+
+
+.profile-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #e5e7eb;
+  color: #111827;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-wrap { position: relative; }
+
+.profile-menu {
+  position: absolute;
+  right: 0;
+  top: 46px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+  min-width: 140px;
+  overflow: hidden;
+}
+
+.profile-menu div {
+  padding: 10px 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.profile-menu div:hover {
+  background: #f3f4f6;
+}
+
+.logout { color: #dc2626; }
