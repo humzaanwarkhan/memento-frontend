@@ -7,14 +7,23 @@ export default function Register({ setToken }) {
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
-  const submit = async e => {
-  e.preventDefault();
-  const res = await api.post("/auth/register", { email, password });
-  localStorage.setItem("token", res.data.token);
-  setToken(res.data.token);
-  navigate("/");   // redirect to app
-};
+  const submit = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await api.post("/auth/register", { email, password });
 
+      if (res.data?.token) {
+        localStorage.setItem("token", res.data.token);
+        setToken(res.data.token);
+        navigate("/app");
+      } else {
+        alert("Account created. Please login.");
+        navigate("/login");
+      }
+    } catch (err) {
+      alert(err.response?.data?.msg || "Registration failed");
+    }
+  };
 
   return (
     <div className="login-container">

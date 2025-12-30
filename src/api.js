@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: window.location.origin.replace("5173", "5000").replace("localhost", "memento.test")
+  baseURL: "https://memento-backend-20xn.onrender.com"
 
 });
 
